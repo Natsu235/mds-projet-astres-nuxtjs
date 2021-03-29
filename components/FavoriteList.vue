@@ -1,5 +1,5 @@
 <template>
-  <div class="favorite-list pt-4">
+  <div class="favorite-list pt-5">
     <div v-if="favorites.length" class="row">
       <StarItem
         v-for="(star, index) in favorites"
@@ -15,6 +15,7 @@
 
 <script>
 export default {
+  name: 'FavoriteList',
   computed: {
     favorites() {
       return this.$store.state.favorites;

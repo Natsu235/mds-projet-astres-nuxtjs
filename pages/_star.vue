@@ -23,6 +23,7 @@
         <p class="lead"><u>Moons:</u> {{ starMoons }}</p>
       </div>
     </div>
+    <BackButton />
   </main>
 </template>
 

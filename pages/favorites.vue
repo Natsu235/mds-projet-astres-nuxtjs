@@ -5,6 +5,7 @@
       <p class="lead">{{ this.description }}</p>
       <FavoriteList />
     </div>
+    <BackButton />
   </main>
 </template>
 
@@ -13,7 +14,7 @@ export default {
   data() {
     return {
       title: 'Favorites',
-      description : 'All of your favorite planets are listed here.'
+      description: 'All of your favorite planets are listed here.'
     }
   }
 }

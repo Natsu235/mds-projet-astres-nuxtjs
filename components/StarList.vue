@@ -1,8 +1,8 @@
 <template>
-  <div class="star-list pt-4">
-    <div v-if="stars.length" class="row">
+  <div class="star-list pt-5">
+    <div v-if="filteredStars.length" class="row">
       <StarItem
-        v-for="(star, index) in stars"
+        v-for="(star, index) in filteredStars"
         :star="star"
         :index="index"
         :key="index" />
@@ -15,10 +15,7 @@
 
 <script>
 export default {
-  computed: {
-    stars() {
-      return this.$store.state.stars;
-    }
-  }
+  name: 'StarList',
+  props: ['filteredStars']
 }
 </script>

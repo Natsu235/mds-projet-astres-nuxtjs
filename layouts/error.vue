@@ -5,11 +5,11 @@
     <span class="pb-5">{{ error.message }}</span>
     <div class="row">
       <button type="button" class="btn btn-primary mr-3" onclick="window.location.reload();">
-        <font-awesome-icon :icon="{ prefix: 'fas', iconName: 'redo' }" />
+        <fa :icon="{ prefix: 'fas', iconName: 'redo' }" />
         &nbsp;Retry
       </button>
       <button type="button" class="btn btn-secondary" onclick="window.history.back();">
-        <font-awesome-icon :icon="{ prefix: 'fas', iconName: 'arrow-left' }" />
+        <fa :icon="{ prefix: 'fas', iconName: 'arrow-left' }" />
         &nbsp;Go Back
       </button>
     </div>

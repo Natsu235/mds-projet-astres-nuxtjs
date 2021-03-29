@@ -126,13 +126,15 @@ export default {
 .btn {
   z-index: 2;
   position: relative;
-  outline: none;
-  box-shadow: none;
   color: black;
 }
 .btn:hover {
   color: #ffc107 !important;
   transition: 0.2s;
+}
+.btn.btn-link {
+  outline: none;
+  box-shadow: none;
 }
 .fav-icon:hover,
 .fav-icon:active {

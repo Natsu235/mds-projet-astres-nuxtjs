@@ -4,7 +4,7 @@ Projet de **NuxtJS** réalisé en cours de Framework JS à MyDigitalSchool
 ## Description
 
 ### Page des astres
-Il s'agit de la page principal du site qui se charge d'afficher la liste de toutes les planètres du Système Solaire ayant été récupérées au préalable sur [l'API](#API). Sur cette page, il est possible d'ajouter/enlever un astre de ses favoris ou bien d'accéder au détail de celui-ci en cliquant sur la carte correspondante.
+Il s'agit de la page principal du site qui se charge d'afficher la liste de toutes les planètres du Système Solaire ayant été récupérées au préalable sur [l'API](#API). Sur cette page, il est possible d'ajouter/enlever un astre de ses favoris, filtrer l'affichage et accéder aux détails d'un astre en cliquant sur la carte correspondante.
 
 <img src="static/stars-page.png" alt="Page des astres" height="400" />
 

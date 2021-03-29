@@ -28,6 +28,7 @@
 <script>
 export default {
   layout: 'index',
+  middleware: 'redirect'
 }
 </script>
 

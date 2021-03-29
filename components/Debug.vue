@@ -4,11 +4,11 @@
     <h4>Debug Mode is enabled</h4>
     <br />
     <button class="btn btn-warning mr-3" data-toggle="collapse" data-target="#storeContent" aria-expanded="false" aria-controls="storeContent">
-      <font-awesome-icon :icon="{ prefix: 'fas', iconName: 'search' }" />
+      <fa :icon="{ prefix: 'fas', iconName: 'search' }" />
       &nbsp;Check Store State
     </button>
     <button class="btn btn-danger" @click="emptyStore">
-      <font-awesome-icon :icon="{ prefix: 'fas', iconName: 'trash' }" />
+      <fa :icon="{ prefix: 'fas', iconName: 'trash' }" />
       &nbsp;Empty Store
     </button>
     <div class="collapse pt-5" id="storeContent">

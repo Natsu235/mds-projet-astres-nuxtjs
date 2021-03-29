@@ -9,11 +9,29 @@
 
 <script>
 export default {
-  // Fetch data from API
+  data() {
+    return {
+      APIs: ['https://api.nuxtjs.dev/planets', 'https://api.le-systeme-solaire.net/rest/bodies'],
+      actions: ['setStars', 'setBodies']
+    }
+  },
+  // Fetch data from APIs
   async fetch() {
+    /*
+    if (!this.$store.state.stars.length && !this.$store.state.bodies.length) {
+      APIs.forEach(async (API, index) => {
+        let data = await fetch(API).then((res) => res.json());
+        this.$store.commit(actions[index], data);
+      })
+    }
+    */
     if (!this.$store.state.stars.length) {
-      var data = await fetch('https://api.nuxtjs.dev/planets').then((res) => res.json());
-      this.$store.commit('setStars', data);
+      let data = await fetch(this.APIs[0]).then((res) => res.json());
+      this.$store.commit(this.actions[0], data);
+    }
+    if (!this.$store.state.bodies.length) {
+      let data = await fetch(this.APIs[1]).then((res) => res.json());
+      this.$store.commit(this.actions[1], data);
     }
   }
 }
