@@ -28,6 +28,7 @@ Pour plus d'informations sur ce projet, vous pouvez également consulter le [cah
 
 * **JQuery**
 * **Bootstrap**
+* **Fontawesome**
 
 ## Licence
 
