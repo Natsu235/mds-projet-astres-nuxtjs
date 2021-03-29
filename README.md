@@ -20,6 +20,10 @@ Après avoir sélectionné un astre dans la liste, on arrive sur cette page qui 
 
 Pour plus d'informations sur ce projet, vous pouvez également consulter le [cahier des charges du projet](static/projet.pdf).
 
+## Accès en ligne
+
+Une démo en ligne est disponible à l'adresse suivante : https://mds-projet-astres-nuxtjs.herokuapp.com/
+
 ## API
 
 * [NuxtJS Planets](https://api.nuxtjs.dev/planets)
