@@ -18,6 +18,8 @@ Après avoir sélectionné un astre dans la liste, on arrive sur cette page qui 
 
 <img src="static/star-detail-page.png" alt="Page du détail d'un astre" height="400" />
 
+Pour plus d'informations sur ce projet, vous pouvez également consulter le [cahier des charges du projet](static/projet.pdf).
+
 ## API
 
 * [NuxtJS Planets](https://api.nuxtjs.dev/planets)
