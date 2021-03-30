@@ -3,6 +3,7 @@ export const state = () => ({
   stars: [],
   bodies: [],
   favorites: [],
+  filter: 'planet'
 })
 
 export const mutations = {
@@ -29,11 +30,16 @@ export const mutations = {
       state.favorites.splice(index, 1);
     }
   },
+  // Set currently selected filter
+  setFilter(state, filter) {
+    state.filter = filter;
+  },
   // Empty all previously saved data from the store
   emptyStore(state) {
     state.star = {};
     state.stars = [];
     state.bodies = [];
     state.favorites = [];
+    state.filter = 'planet';
   }
 }

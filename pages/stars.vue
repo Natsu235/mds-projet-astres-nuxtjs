@@ -49,36 +49,28 @@ export default {
       title: 'Stars',
       description: 'A list of all of the planets from the Solar System.',
       stars: this.$store.state.stars,
-      planetFilter: true,
-      gasGiantFilter: false,
-      terrestrialFilter: false,
-      moonsFilter: false
+      planetFilter: (this.$store.state.filter == 'planet' ? true : false),
+      gasGiantFilter: (this.$store.state.filter == 'gasGiant' ? true : false),
+      terrestrialFilter: (this.$store.state.filter == 'terrestrial' ? true : false),
+      moonsFilter: (this.$store.state.filter == 'moons' ? true : false)
     }
   },
   methods: {
     togglePlanet() {
       this.planetFilter = !this.planetFilter;
-      this.gasGiantFilter = false;
-      this.terrestrialFilter = false;
-      this.moonsFilter = false;
+      this.gasGiantFilter = this.terrestrialFilter = this.moonsFilter = false;
     },
     toggleGasGiant() {
       this.gasGiantFilter = !this.gasGiantFilter;
-      this.planetFilter = false;
-      this.terrestrialFilter = false;
-      this.moonsFilter = false;
+      this.planetFilter = this.terrestrialFilter = this.moonsFilter = false;
     },
     toggleTerrestrial() {
       this.terrestrialFilter = !this.terrestrialFilter;
-      this.planetFilter = false;
-      this.gasGiantFilter = false;
-      this.moonsFilter = false;
+      this.planetFilter = this.gasGiantFilter = this.moonsFilter = false;
     },
     toggleMoons() {
       this.moonsFilter = !this.moonsFilter;
-      this.planetFilter = false;
-      this.gasGiantFilter = false;
-      this.terrestrialFilter = false;
+      this.planetFilter = this.gasGiantFilter = this.terrestrialFilter = false;
     }
   },
   computed: {
@@ -86,18 +78,22 @@ export default {
       let filteredStars = [];
       if (this.planetFilter) {
         filteredStars = this.stars;
+        this.$store.commit('setFilter', 'planet');
       }
       if (this.gasGiantFilter) {
         // Jupiter, Neptune, Saturn, Uranus
         filteredStars.push(this.stars[1], this.stars[4], this.stars[5], this.stars[6]);
+        this.$store.commit('setFilter', 'gasGiant');
       }
       else if (this.terrestrialFilter) {
         // Earth, Mars, Mercury, Venus
         filteredStars.push(this.stars[0], this.stars[2], this.stars[3], this.stars[7]);
+        this.$store.commit('setFilter', 'terrestrial');
       }
       else if (this.moonsFilter) {
         // Earth, Jupiter, Mars, Neptune, Saturn, Uranus
         filteredStars.push(this.stars[0], this.stars[1], this.stars[2], this.stars[4], this.stars[5], this.stars[6]);
+        this.$store.commit('setFilter', 'moons');
       }
       return filteredStars;
     }
