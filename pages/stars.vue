@@ -50,47 +50,62 @@ export default {
       description: 'A list of all of the planets from the Solar System.',
       stars: this.$store.state.stars,
       planetFilter: true,
-      gasGiantFilter: true,
-      terrestrialFilter: true,
-      moonsFilter: true
+      gasGiantFilter: false,
+      terrestrialFilter: false,
+      moonsFilter: false
     }
   },
   methods: {
     togglePlanet() {
       this.planetFilter = !this.planetFilter;
+      this.gasGiantFilter = false;
+      this.terrestrialFilter = false;
+      this.moonsFilter = false;
     },
     toggleGasGiant() {
       this.gasGiantFilter = !this.gasGiantFilter;
+      this.planetFilter = false;
+      this.terrestrialFilter = false;
+      this.moonsFilter = false;
     },
     toggleTerrestrial() {
       this.terrestrialFilter = !this.terrestrialFilter;
+      this.planetFilter = false;
+      this.gasGiantFilter = false;
+      this.moonsFilter = false;
     },
     toggleMoons() {
       this.moonsFilter = !this.moonsFilter;
+      this.planetFilter = false;
+      this.gasGiantFilter = false;
+      this.terrestrialFilter = false;
     }
   },
   computed: {
     filteredStars() {
       // All filters are activated
-      let filteredStars = [];
       if (this.planetFilter && this.gasGiantFilter && this.terrestrialFilter && this.moonsFilter) {
-        filteredStars = this.stars;
+        return this.stars;
       }
       else {
+        let filteredStars = [];
+        if (this.planetFilter) {
+          filteredStars = this.stars;
+        }
         if (this.gasGiantFilter) {
           // Jupiter, Neptune, Saturn, Uranus
           filteredStars.push(this.stars[1], this.stars[4], this.stars[5], this.stars[6]);
         }
-        if (this.terrestrialFilter) {
+        else if (this.terrestrialFilter) {
           // Earth, Mars, Mercury, Venus
           filteredStars.push(this.stars[0], this.stars[2], this.stars[3], this.stars[7]);
         }
-        if (this.MoonsFilter) {
+        else if (this.moonsFilter) {
           // Earth, Jupiter, Mars, Neptune, Saturn, Uranus
           filteredStars.push(this.stars[0], this.stars[1], this.stars[2], this.stars[4], this.stars[5], this.stars[6]);
         }
+        return filteredStars;
       }
-      return filteredStars;
     }
   }
 }
