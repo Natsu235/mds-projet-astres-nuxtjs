@@ -26,8 +26,12 @@ Une démo en ligne est disponible à l'adresse suivante : https://mds-projet-ast
 
 ## Tests
 
-* **Logo.spec.js** - Test par défaut fourni par Nuxt qui s'assure que Logo soit accessible
-* **StarList.spec.js** - Un simple test qui vérifie que le composant "StarList" contenant la liste des astres s'éxecute puis s'affiche correctement sur la [Page des astres](#Page-des-astres).
+L'outil **Jest** nous permet de réaliser des tests au sein de notre application.
+
+Il est donc possible de s'assurer du bon fonctionnement d'un composant grâce à la commnde suivante : `npm run test`
+
+* **Logo.spec.js** - Test par défaut fourni par Nuxt qui s'assure que le Logo soit accessible
+* **StarList.spec.js** - Un simple test qui vérifie que le composant "StarList" contenant la liste des astres s'éxecute bien puis s'affiche correctement sur la [Page des astres](#Page-des-astres).
 
 ## APIs
 
