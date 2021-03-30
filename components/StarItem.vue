@@ -41,7 +41,7 @@
         </div>
         <!-- Star Description -->
         <p class="card-text text-justify">
-          {{ starDescription }}
+          {{ starDescription | truncate }}
         </p>
         <NuxtLink class="text-muted float-right stretched-link mb-0" :to="starLink" @click.native="setStar">Read more 
           <fa :icon="{ prefix: 'fas', iconName: 'chevron-right' }" />
@@ -77,9 +77,8 @@ export default {
       return this.star.radius == null ? '?????? km' : this.star.radius;
     },
     starDescription() {
-      return this.star.description == null
-        ? 'No description.'
-        : this.star.description.substring(0, 200) + '..'; },
+      return this.star.description == null ? 'No description.' : this.star.description;
+    },
     starPreview() {
       return this.star.image == null ? '/planet-1.png' : '/planet-1.png'; //this.star.image
     },
@@ -105,6 +104,11 @@ export default {
         default:
           return true;
       }
+    }
+  },
+  filters: {
+    truncate(string) {
+      return string.substring(0, 200) + '..';
     }
   }
 }
@@ -138,7 +142,7 @@ export default {
 }
 .fav-icon:hover,
 .fav-icon:active {
-  filter: drop-shadow(0 0 8px #ffb300);
+  filter: drop-shadow(0 0 8px #ffa500);
   transition: 0.3s;
 }
 </style>

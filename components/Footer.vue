@@ -11,13 +11,7 @@
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      name: 'The Solar System',
-    }
-  },
-}
+export default {}
 </script>
 
 <style scoped>

@@ -49,10 +49,10 @@ export default {
       title: 'Stars',
       description: 'A list of all of the planets from the Solar System.',
       stars: this.$store.state.stars,
-      planetFilter: (this.$store.state.filter == 'planet' ? true : false),
-      gasGiantFilter: (this.$store.state.filter == 'gasGiant' ? true : false),
-      terrestrialFilter: (this.$store.state.filter == 'terrestrial' ? true : false),
-      moonsFilter: (this.$store.state.filter == 'moons' ? true : false)
+      planetFilter: this.$store.state.filter == 'planet' ? true : false,
+      gasGiantFilter: this.$store.state.filter == 'gasGiant' ? true : false,
+      terrestrialFilter: this.$store.state.filter == 'terrestrial' ? true : false,
+      moonsFilter: this.$store.state.filter == 'moons' ? true : false
     }
   },
   methods: {
