@@ -1,7 +1,7 @@
 <template>
   <main>
     <div class="container pt-4">
-      <div class="row">
+      <div class="row align-items-center">
         <div class="col-lg-8">
           <h1>{{ this.title }}</h1>
           <p class="lead">{{ this.description }}</p>
@@ -83,29 +83,23 @@ export default {
   },
   computed: {
     filteredStars() {
-      // All filters are activated
-      if (this.planetFilter && this.gasGiantFilter && this.terrestrialFilter && this.moonsFilter) {
-        return this.stars;
+      let filteredStars = [];
+      if (this.planetFilter) {
+        filteredStars = this.stars;
       }
-      else {
-        let filteredStars = [];
-        if (this.planetFilter) {
-          filteredStars = this.stars;
-        }
-        if (this.gasGiantFilter) {
-          // Jupiter, Neptune, Saturn, Uranus
-          filteredStars.push(this.stars[1], this.stars[4], this.stars[5], this.stars[6]);
-        }
-        else if (this.terrestrialFilter) {
-          // Earth, Mars, Mercury, Venus
-          filteredStars.push(this.stars[0], this.stars[2], this.stars[3], this.stars[7]);
-        }
-        else if (this.moonsFilter) {
-          // Earth, Jupiter, Mars, Neptune, Saturn, Uranus
-          filteredStars.push(this.stars[0], this.stars[1], this.stars[2], this.stars[4], this.stars[5], this.stars[6]);
-        }
-        return filteredStars;
+      if (this.gasGiantFilter) {
+        // Jupiter, Neptune, Saturn, Uranus
+        filteredStars.push(this.stars[1], this.stars[4], this.stars[5], this.stars[6]);
       }
+      else if (this.terrestrialFilter) {
+        // Earth, Mars, Mercury, Venus
+        filteredStars.push(this.stars[0], this.stars[2], this.stars[3], this.stars[7]);
+      }
+      else if (this.moonsFilter) {
+        // Earth, Jupiter, Mars, Neptune, Saturn, Uranus
+        filteredStars.push(this.stars[0], this.stars[1], this.stars[2], this.stars[4], this.stars[5], this.stars[6]);
+      }
+      return filteredStars;
     }
   }
 }

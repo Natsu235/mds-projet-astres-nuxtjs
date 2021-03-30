@@ -4,7 +4,7 @@ Projet de **NuxtJS** réalisé en cours de Framework JS à MyDigitalSchool
 ## Présentation
 
 ### Page des astres
-Il s'agit de la page principal du site qui se charge d'afficher la liste de toutes les planètes du Système Solaire ayant été récupérées au préalable sur [l'API](#API). Sur cette page, il est possible d'ajouter ou enlever un astre de ses favoris, filtrer l'affichage de la liste et accéder aux détails d'un astre en cliquant sur la carte qui lui correspond.
+Il s'agit de la page principal du site qui se charge d'afficher la liste de toutes les planètes du Système Solaire ayant été récupérées au préalable sur [l'API](#APIs). Sur cette page, il est possible d'ajouter ou enlever un astre de ses favoris, filtrer l'affichage de la liste et accéder aux détails d'un astre en cliquant sur la carte qui lui correspond.
 
 <img src="static/stars-page.png" alt="Page des astres" height="400" />
 
@@ -24,9 +24,15 @@ Pour plus d'informations sur ce projet, vous pouvez également consulter le [cah
 
 Une démo en ligne est disponible à l'adresse suivante : https://mds-projet-astres-nuxtjs.herokuapp.com/
 
-## API
+## Tests
+
+* **Logo.spec.js** - Test par défaut fourni par Nuxt qui s'assure que Logo soit accessible
+* **StarList.spec.js** - Un simple test qui vérifie que le composant "StarList" contenant la liste des astres s'éxecute puis s'affiche correctement sur la [Page des astres](#Page-des-astres).
+
+## APIs
 
 * [NuxtJS Planets](https://api.nuxtjs.dev/planets)
+* [Solar System OpenData](https://api.le-systeme-solaire.net/rest/bodies)
 
 ## Bibliothèques externes
 
