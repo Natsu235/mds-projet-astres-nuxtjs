@@ -16,11 +16,11 @@
           <div class="col-3">
             <!-- Favorite Icon (Active) -->
             <button v-if="favorites.includes(star)" class="btn btn-link btn-xs text-black float-right p-0" type="button" @click="removeFromFavorites">
-              <fa class="fav-icon text-warning pt-1" :icon="{ prefix: 'fas', iconName: 'star' }" style="font-size: 24px;" />
+              <fa class="fav-icon text-warning pt-1" :icon="{ prefix: 'fas', iconName: 'star' }" />
             </button>
             <!-- Favorite Icon (Inactive) -->
             <button v-else class="btn btn-link btn-xs text-black float-right p-0" type="button" @click="addToFavorites">
-              <fa class="fav-icon pt-1" :icon="{ prefix: 'far', iconName: 'star' }" style="font-size: 24px;" />
+              <fa class="fav-icon pt-1" :icon="{ prefix: 'far', iconName: 'star' }" />
             </button>
           </div>
         </div>
@@ -36,7 +36,7 @@
           </div>
           <div class="col-3">
             <!-- Star Preview -->
-            <img class="float-right" src="/planet-3.png" :alt="starName" height="50" />
+            <img class="float-right" src="/planet-3.png" alt="" height="50" />
           </div>
         </div>
         <!-- Star Description -->
@@ -139,6 +139,9 @@ export default {
 .btn.btn-link {
   outline: none;
   box-shadow: none;
+}
+.fav-icon {
+  font-size: 24px;
 }
 .fav-icon:hover,
 .fav-icon:active {

@@ -13,7 +13,7 @@
         </div>
         <div class="col-lg-6">
           <div class="d-lg-none pt-5"></div>
-          <img class="float-lg-right" :src="starPreview" :alt="starName" height="200" />
+          <img class="float-lg-right text-muted" :src="starPreview" alt="Preview unavailable" height="200" />
         </div>
       </div>
       <div class="pt-5">
