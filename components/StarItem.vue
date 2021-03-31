@@ -36,14 +36,14 @@
           </div>
           <div class="col-3">
             <!-- Star Preview -->
-            <img class="float-right" :src="starPreview" :alt="starName" height="50" />
+            <img class="float-right" src="/planet-3.png" :alt="starName" height="50" />
           </div>
         </div>
         <!-- Star Description -->
         <p class="card-text text-justify">
           {{ starDescription | truncate }}
         </p>
-        <NuxtLink class="text-muted float-right stretched-link mb-0" :to="starLink" @click.native="setStar">Read more 
+        <NuxtLink class="text-muted float-right stretched-link mb-0" :to="starLink | lowercase" @click.native="setStar">Read more 
           <fa :icon="{ prefix: 'fas', iconName: 'chevron-right' }" />
         </NuxtLink>
       </div>
@@ -79,11 +79,8 @@ export default {
     starDescription() {
       return this.star.description == null ? 'No description.' : this.star.description;
     },
-    starPreview() {
-      return this.star.image == null ? '/planet-1.png' : '/planet-1.png'; //this.star.image
-    },
     starLink() {
-      return this.star.title == null ? '#' : this.star.title.toLowerCase();
+      return this.star.title == null ? '#' : this.star.title;
     },
     isGas() {
       switch(this.star.slug) {
@@ -109,6 +106,9 @@ export default {
   filters: {
     truncate(string) {
       return string.substring(0, 200) + '..';
+    },
+    lowercase(string) {
+      return string.toLowerCase();
     }
   }
 }

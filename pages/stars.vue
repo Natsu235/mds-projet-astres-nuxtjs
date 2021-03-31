@@ -1,13 +1,13 @@
 <template>
   <main>
-    <div class="container pt-4">
+    <div class="container pt-5">
       <div class="row align-items-center">
         <div class="col-lg-8">
           <h1>{{ this.title }}</h1>
           <p class="lead">{{ this.description }}</p>
         </div>
         <div class="col-lg-4">
-          <div class="d-lg-none d-xl-block pt-4"></div>
+          <div class="d-lg-none pt-4"></div>
           <h3>Filters</h3>
           <div class="d-inline-flex">
             <button class="btn btn-link btn-xs p-0" @click="togglePlanet">

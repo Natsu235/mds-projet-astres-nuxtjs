@@ -3,7 +3,7 @@
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark shadow-sm">
       <div class="container">
         <NuxtLink class="navbar-brand text-white d-inline-flex align-items-center font-weight-bold" to="/stars">
-          <fa class="globe-icon" :icon="{ prefix: 'fas', iconName: 'globe-americas' }" style="font-size: 28px;" />
+          <PlanetIcon />
           &nbsp;&nbsp;{{ this.name }}
         </NuxtLink>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

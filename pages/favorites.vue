@@ -1,6 +1,6 @@
 <template>
   <main>
-    <div class="container pt-4">
+    <div class="container pt-5">
       <h1>{{ this.title }}</h1>
       <p class="lead">{{ this.description }}</p>
       <FavoriteList />
