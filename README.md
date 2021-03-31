@@ -1,4 +1,7 @@
 # Projet Astres NuxtJS
+
+<img src="static/planet-2.png" alt="Logo" height="120" />
+
 Projet de **NuxtJS** réalisé en cours de Framework JS à MyDigitalSchool
 
 ## Présentation
