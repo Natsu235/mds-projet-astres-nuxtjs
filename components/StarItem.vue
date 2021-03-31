@@ -1,5 +1,5 @@
 <template>
-  <div class="star-item col-lg-4">
+  <div class="star-item col-md-6 col-lg-4">
     <div class="card border-muted rounded mb-3">
       <!--<div class="card-header">Header</div>-->
       <div class="card-body">
