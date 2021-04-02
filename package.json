@@ -35,7 +35,7 @@
     "bootstrap": "^4.6.0",
     "core-js": "^3.9.1",
     "jquery": "^3.6.0",
-    "nuxt": "^2.15.3",
+    "nuxt": "^2.15.4",
     "nuxt-fontawesome": "^0.4.0",
     "popper.js": "^1.16.1",
     "v-tooltip": "^2.1.3"
